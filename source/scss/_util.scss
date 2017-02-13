@@ -1,0 +1,54 @@
+.nowrap { white-space: nowrap }
+.osy, .osx, .os { -webkit-overflow-scrolling: touch }
+.no-margin-right-last > *:last-child { margin-right: 0 }
+.bg-black { background-color: $black }
+.bg-white { background-color: $white }
+
+.bold { font-weight: bold }
+
+.text-underline {
+  background-repeat: repeat-x;
+  background-position: 0 100%;
+  padding-bottom: 0px;
+}
+
+.text-underline {
+  background-image: url('images/underline.svg');
+  background-size: 1px 2px;
+}
+
+.text-underline-links a { @extend .text-underline }
+.text-underline-links a:hover { background: none }
+
+.inline-list li {
+  display: inline;
+  &:not(:last-child):after {
+    content: ', ';
+  }
+}
+
+.square {
+  position: relative;
+  &:after {
+    content: '';
+    display: block;
+    padding-top: 100%;
+  }
+}
+
+.spine {
+  position: relative;
+  &:after {
+    content: '';
+    display: block;
+    padding-top: 2.7%;
+  }
+}
+
+.op50-hover:hover {
+  opacity: 0.5;
+}
+
+.rotate-hover:hover {
+  transform: rotate(180deg)
+}

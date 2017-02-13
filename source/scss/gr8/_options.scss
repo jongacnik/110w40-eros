@@ -1,0 +1,30 @@
+$bps : (
+  'xs' : '(min-width:568px)',
+  'sm' : '(min-width:768px)',
+  'md' : '(min-width:1024px)',
+  'lg' : '(min-width:1200px)',
+  'xl' : '(min-width:1400px)'
+);
+
+$gaps : (
+  '1' : 0.6rem,
+  '2' : 1.2rem,
+  '3' : 1.8rem,
+  '4' : 2.4rem
+);
+
+$guts : (
+  '!' : 1.2rem,
+  'md' : 2.4rem
+);
+
+$fonts : (
+  '1' : 2.0rem,
+  '2' : 1.6rem,
+  '3' : 1.0rem
+);
+
+$cols  : 12;
+$htags : true;
+$nest  : true;
+$resp  : true;

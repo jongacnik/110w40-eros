@@ -1,0 +1,10 @@
+.image-container {
+  background-size: 35px;
+  @media #{map-get($bps, 'md')} {
+    background-size: 50px;
+  }
+}
+
+.loader {
+  background-image: url('images/loader.gif');
+}

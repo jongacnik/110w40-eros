@@ -1,0 +1,17 @@
+title: Page
+pages: true
+files:
+  fields:
+    text:
+      label: Caption
+      type: textarea
+fields:
+  title:
+    label: Title
+    type:  text
+  text:
+    label: Text
+    type:  textarea
+  metatext:
+    label: Meta Text
+    type:  textarea

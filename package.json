@@ -1,0 +1,41 @@
+{
+  "name": "eros",
+  "version": "1.0.0",
+  "description": "Eros 2017",
+  "main": "index.js",
+  "scripts": {
+    "css-sass": "node-sass source/scss/main.scss --output-style compressed > public/assets/bundle.css",
+    "css-prefix": "postcss -u autoprefixer public/assets/bundle.css -d public/assets",
+    "build-css": "npm run css-sass && npm run css-prefix",
+    "watch-css": "npm run build-css && onchange 'source/scss/**/*.scss' -- npm run build-css",
+    "build-js": "browserify -t [ babelify --presets [ es2015 ] ] -t brfs source/js/main.js | uglifyjs -c > public/assets/bundle.js",
+    "watch-js": "watchify -t [ babelify --presets [ es2015 ] ] -t brfs source/js/main.js -o public/assets/bundle.js",
+    "serve": "php -S localhost:7000 -t public",
+    "dev": "parallelshell 'npm run serve' 'npm run watch-js' 'npm run watch-css'"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^6.3.6",
+    "babel-preset-es2015": "^6.9.0",
+    "babelify": "^7.3.0",
+    "brfs": "^1.4.3",
+    "browserify": "^13.0.1",
+    "node-sass": "^3.7.0",
+    "onchange": "^2.4.0",
+    "parallelshell": "^2.0.0",
+    "postcss-cli": "^2.5.2",
+    "uglifyjs": "^2.4.10",
+    "watchify": "^3.7.0"
+  },
+  "dependencies": {
+    "blazy": "^1.6.2",
+    "has-touch": "^1.0.1",
+    "jquery": "^2.2.4",
+    "jquery-mousewheel": "^3.1.13",
+    "lodash": "^4.13.1",
+    "mbl": "^1.2.7",
+    "tweezer.js": "^1.3.2",
+    "velocity-animate": "^1.2.3"
+  }
+}

@@ -1,0 +1,19 @@
+title: Site
+pages: true
+files: true
+fields:
+  title:
+    label: Title
+    type:  text
+  text:
+    label: Site Description
+    type:  text
+  keywords:
+    label: Keywords
+    type: text
+  socialImage:
+    label: Social Image
+    type: image
+  favicon:
+    label: Favicon
+    type: image

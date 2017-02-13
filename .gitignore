@@ -1,0 +1,9 @@
+.DS_Store
+/node_modules
+/public/thumbs/*
+/public/assets/avatars
+/public/assets/bundle.css
+/public/assets/bundle.js
+/public/content
+/public/site/accounts
+/public/site/cache

@@ -1,0 +1,70 @@
+html.fluid {
+  // font-size: 55.3%;
+  // @media (min-width:1024px) {
+  //   font-size: 62.5%;
+  // }
+  font-size: 62.5%;
+  @media (min-width:1600px) {
+    font-size: 72.9%;
+  }
+}
+
+body {
+  font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;;
+  line-height: 1.3;
+  letter-spacing: -0.5px;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  font-weight: normal;
+}
+
+h1, .h1 {
+  line-height: 1.2;
+  @media #{map-get($bps, 'sm')} {
+    font-size: 2.4rem;
+  }
+  @media #{map-get($bps, 'md')} {
+    font-size: 2.6vw;
+  }
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.text a {
+  border-bottom: 1px solid $black;
+  &.active { border: none }
+}
+
+.invert .text a {
+  border-color: $white;
+}
+
+.active-invert .text a {
+  border: none;
+  &.active {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+  }
+}
+
+.no-touch {
+  .invert .text a:hover { border: none; }
+  .text a:hover { border: none; }
+  .active-invert .text a:hover {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+  }
+}
+
+.owl > * + * {
+  margin-top: 1em;
+}
+
+.text li {
+  padding-left: 2em;
+  text-indent: -2em;
+}

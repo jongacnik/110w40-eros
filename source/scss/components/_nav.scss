@@ -1,0 +1,46 @@
+[data-drawer-trigger].active {
+  border-bottom: 1px solid $black;
+}
+
+.no-touch {
+  [data-drawer-trigger]:hover {
+    border-bottom: 1px solid $black;
+  }
+}
+
+.volume-hover {
+  display: none;
+  @media #{map-get($bps, 'md')} {
+    &:before {
+      content: ' \2192\20';
+      white-space: normal;
+    }
+  }
+}
+.volume-hover.hover {
+  display: inline;
+}
+
+@media #{map-get($bps, 'md')} {
+  .ag-volumes-nav {
+    counter-reset: volume;
+  }
+  .ag-volumes-nav-item {
+    counter-increment: volume;
+  }
+  .ag-volumes-nav-item:hover:before,
+  .ag-volumes-nav-item.active:before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -0.2vw;
+    content: counter(volume);
+    font-size: 5vw;
+    line-height: 1.4;
+    letter-spacing: -0.4vw;
+    text-align: center;
+    font-weight: bold;
+    color: $black;
+  }
+}
