@@ -10,7 +10,7 @@
   <? $count = 1 ?>
   <? foreach($images as $image) : ?>
     <a href="<?= $volume->url()?>#<?= $count ?>" data-index-jumpto>
-      <img class="dib rotate-hover" data-mbl data-src="<?= $image->url() ?>">
+      <img class="dib op50-hover" data-mbl data-src="<?= $image->url() ?>">
     </a>
     <? $count++ ?>
   <? endforeach ?>

@@ -33,5 +33,5 @@
   }
 }
 
-[data-mbl] { opacity: 0; transition: opacity 0.3s ease; }
-[data-mbl-complete] { opacity: 1 }
+// [data-mbl]:not([data-mbl-complete]) { opacity: 0; transition: opacity 0.3s ease; }
+// [data-mbl-complete] { opacity: 1 }
